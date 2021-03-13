@@ -5,7 +5,7 @@ echo "(dotfiles) starting ..." >> ~/status
 
 # source the bashrc_patch from dotfiles
 echo "" >> ~/.bashrc
-echo "source ~/dotfiles/my_bashrc" >> ~/.bashrc
+echo "source /workspaces/.codespaces/.persistedshare/dotfiles/my_bashrc" >> ~/.bashrc
 
 mkdir -p ~/.local/bin
 

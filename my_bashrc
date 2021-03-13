@@ -36,7 +36,7 @@ complete -F __start_kubectl k
 
 export GO111MODULE=on
 export PIP=$(ipconfig | tail -n 1)
-export PATH=$PATH:$HOME/.local/bin:$HOME/dotfiles/bin
+export PATH=$PATH:$HOME/.local/bin:/workspaces/.codespaces/.persistedshare/dotfiles/bin
 
 git config --global url.https://bartr:${PAT}@github.com/bartr/.insteadOf b://
 git config --global url.https://bartr:${PAT}@github.com/retaildevcrews/.insteadOf r://
