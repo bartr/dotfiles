@@ -8,6 +8,9 @@ echo "" >> ~/.bashrc
 echo "source /workspaces/.codespaces/.persistedshare/dotfiles/.bashrc" >> ~/.bashrc
 
 mkdir -p ~/.local/bin
+mkdir -p /etc/bash_completion.d
+
+sudo cp kubectl /etc/bash_completion.d
 
 git config --global user.name bartr
 git config --global user.email bartr@microsoft.com

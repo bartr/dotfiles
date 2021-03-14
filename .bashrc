@@ -31,7 +31,6 @@ alias kcgc='kubectl config get-contexts'
 alias ipconfig='ip -4 a show eth0 | grep inet | sed "s/inet//g" | sed "s/ //g" | cut -d / -f 1'
 
 # add kubectl completion
-source $HOME/dotfiles/kubectl_completion
 complete -F __start_kubectl k
 
 export GO111MODULE=on
