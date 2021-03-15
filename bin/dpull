@@ -1,0 +1,11 @@
+#!/bin/sh
+
+docker pull mcr.microsoft.com/dotnet/core/sdk:3.1-alpine
+docker pull alpine:latest
+docker pull mcr.microsoft.com/vscode/devcontainers/base:focal
+docker pull mcr.microsoft.com/dotnet/core/aspnet:3.1-alpine
+docker pull mcr.microsoft.com/dotnet/core/sdk:3.1
+docker pull mcr.microsoft.com/vscode/devcontainers/base:buster
+docker pull ubuntu:focal
+docker pull cblmariner.azurecr.io/cblmariner:1.0
+
