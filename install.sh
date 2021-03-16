@@ -19,7 +19,7 @@ echo "(dotfiles) starting ..." >> /home/codespace/status
 #git config --global init.defaultbranch main
 #git config --global core.pager more
 
-echo "(dotfiles) Installing packages ..." >> /home/codespace/status
+#echo "(dotfiles) Installing packages ..." >> /home/codespace/status
 
 # install / update key apps
 #DEBIAN_FRONTEND=noninteractive
@@ -27,6 +27,6 @@ echo "(dotfiles) Installing packages ..." >> /home/codespace/status
 #sudo apt-get install -y --no-install-recommends apt-utils dialog curl git jq httpie bash-completion
 #DEBIAN_FRONTEND=dialog
 
-echo "(dotfiles) Done" >> /home/codespace/status
-date >> /home/codespace/status
+#echo "(dotfiles) Done" >> /home/codespace/status
+#date >> /home/codespace/status
 pwd >> /home/codespace/status
