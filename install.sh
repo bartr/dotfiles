@@ -9,6 +9,8 @@ echo "(dotfiles) starting ..." >> ~/status
 echo "" >> ~/.bashrc
 echo "source /home/codespace/dotfiles/my_bashrc" >> ~/.bashrc
 
+ln -s /workspaces/.codespaces/.persistedshare/dotfiles ~/dotfiles
+
 mkdir -p ~/.local/bin
 
 sudo mkdir -p /etc/bash_completion.d
