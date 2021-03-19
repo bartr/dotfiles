@@ -22,6 +22,7 @@ git config --global core.whitespace blank-at-eol,blank-at-eof,space-before-tab
 git config --global pull.rebase false
 git config --global init.defaultbranch main
 git config --global core.pager more
+sudo git config --system credential.helper '!f() { sleep 1; echo "username=${GIT_COMMITTER_NAME}"; echo "password=${GITHUB_TOKEN}"; }; f'
 
 echo "(dotfiles) Installing packages ..." >> ~/status
 
