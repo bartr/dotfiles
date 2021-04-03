@@ -43,6 +43,6 @@ git config --global url.https://bartr:${PAT}@github.com/.insteadOf g://
 
 # set GitHub info for codespaces
 
-[[ ! -z "$PAT" ]] && export GITHUB_TOKEN=$PAT
+[[ ! -z "$PAT" ]] && export GITHUB_PAT=$PAT
 export GIT_COMMITTER_NAME=bartr
 export GIT_COMMITTER_EMAIL=bartr@microsoft.com
