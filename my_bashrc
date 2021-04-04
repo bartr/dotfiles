@@ -38,7 +38,7 @@ export PIP=$(ipconfig | tail -n 1)
 export PATH=$PATH:$HOME/.local/bin:/workspaces/.codespaces/.persistedshare/dotfiles/bin
 
 git config --global url.https://bartr:${PAT}@github.com/bartr/.insteadOf b://
-git config --global url.https://bartr:b08976d8ec67e524d289d41e25b1b4ff417b47f3@github.com/cloudatx/.insteadOf c://
+git config --global url.https://bartr:${PAT}@github.com/cloudatx/.insteadOf c://
 git config --global url.https://bartr:${PAT}@github.com/.insteadOf g://
 git config --global url.https://bartr:${PAT}@github.com/retaildevcrews/.insteadOf r://
 
