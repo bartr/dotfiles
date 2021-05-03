@@ -2,12 +2,12 @@
 
 pwd >> ~/status
 
-date >> /home/codespace/status
+date >> ~/status
 echo "(dotfiles) starting ..." >> ~/status
 
 # source the bashrc_patch from dotfiles
 echo "" >> ~/.bashrc
-echo "source /home/codespace/dotfiles/my_bashrc" >> ~/.bashrc
+echo "source ~/dotfiles/my_bashrc" >> ~/.bashrc
 
 ln -s /workspaces/.codespaces/.persistedshare/dotfiles ~/dotfiles
 
