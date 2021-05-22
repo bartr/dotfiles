@@ -37,11 +37,6 @@ export GO111MODULE=on
 export PIP=$(ipconfig | tail -n 1)
 export PATH=$PATH:$HOME/.local/bin:/workspaces/.codespaces/.persistedshare/dotfiles/bin
 
-git config --global url.https://bartr:${PAT}@github.com/bartr/.insteadOf b://
-git config --global url.https://bartr:${PAT}@github.com/cloudatx/.insteadOf c://
-git config --global url.https://bartr:${PAT}@github.com/.insteadOf g://
-git config --global url.https://bartr:${PAT}@github.com/retaildevcrews/.insteadOf r://
-
 # set GitHub info for codespaces
 export GITHUB_PAT=$PAT
 export GIT_COMMITTER_NAME=bartr

@@ -13,9 +13,6 @@ ln -s /workspaces/.codespaces/.persistedshare/dotfiles ~/dotfiles
 
 mkdir -p ~/.local/bin
 
-sudo mkdir -p /etc/bash_completion.d
-sudo cp /workspaces/.codespaces/.persistedshare/dotfiles/kubectl /etc/bash_completion.d
-
 git config --global user.name bartr
 git config --global user.email bartr@microsoft.com
 git config --global core.whitespace blank-at-eol,blank-at-eof,space-before-tab
@@ -23,6 +20,11 @@ git config --global pull.rebase false
 git config --global init.defaultbranch main
 git config --global core.pager more
 sudo git config --system credential.helper '!f() { sleep 1; echo "username=${GIT_COMMITTER_NAME}"; echo "password=${GITHUB_PAT}"; }; f'
+git config --global url.https://github.com/bartr/.insteadOf b://
+git config --global url.https://github.com/cloudatx/.insteadOf c://
+git config --global url.https://github.com/.insteadOf g://
+git config --global url.https://github.com/retaildevcrews/.insteadOf r://
+
 
 echo "(dotfiles) Installing packages ..." >> ~/status
 
