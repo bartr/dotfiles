@@ -1,10 +1,5 @@
 #!/bin/sh
 
-pwd >> ~/status
-
-date >> ~/status
-echo "(dotfiles) starting ..." >> ~/status
-
 # source the bashrc_patch from dotfiles
 echo "" >> ~/.bashrc
 echo "source ~/dotfiles/my_bashrc" >> ~/.bashrc
@@ -25,14 +20,8 @@ git config --global url.https://github.com/cloudatx/.insteadOf c://
 git config --global url.https://github.com/.insteadOf g://
 git config --global url.https://github.com/retaildevcrews/.insteadOf r://
 
-
-echo "(dotfiles) Installing packages ..." >> ~/status
-
 # install / update key apps
 DEBIAN_FRONTEND=noninteractive
 sudo apt-get update
 sudo apt-get install -y --no-install-recommends apt-utils dialog curl git jq httpie bash-completion
 DEBIAN_FRONTEND=dialog
-
-echo "(dotfiles) Done" >> ~/status
-date >> ~/status
