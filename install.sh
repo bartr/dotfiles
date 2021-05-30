@@ -33,5 +33,5 @@ git config --global url.https://github.com/retaildevcrews/.insteadOf r://
 # install / update key utils
 DEBIAN_FRONTEND=noninteractive
 sudo apt-get update
-sudo apt-get install -y --no-install-recommends apt-utils dialog curl git jq httpie bash-completion
+sudo apt-get install -y --no-install-recommends apt-utils dialog curl git nano jq httpie bash-completion
 DEBIAN_FRONTEND=dialog
