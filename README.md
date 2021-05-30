@@ -13,10 +13,10 @@
 
 ### Usage
 
-- Fork this repo to your public dotfiles repo
+- Clone (don not fork) this repo to your public dotfiles repo
 - The dotfiles are cloned to `/workspaces/.codespaces/.persistedshare/dotfiles/` when a `Codespace` is created
-  - Add this command to your install.sh to mount at `~/dotfiles`
-    - `ln -s /workspaces/.codespaces/.persistedshare/dotfiles ~/dotfiles`
+  - Add this command to your install.sh to mount at `$HOME/dotfiles`
+    - `ln -s /workspaces/.codespaces/.persistedshare/dotfiles $HOME/dotfiles`
   - You can keep the files updated using git pull
   - You can update your `dotfiles` in `Codespace` and git push
   - You can reference the files in other startup scripts like `.bashrc`
@@ -26,10 +26,10 @@
 - Edit install.sh to install / customize any apps
   - recommend not including apt upgrade in `install.sh`
 - Edit my_bashrc with your preferences
-  - install.sh adds a `source my_bashrc` to `~/.bashrc`
+  - install.sh adds a `source my_bashrc` to `$HOME/.bashrc`
   - since this is the last line in `.bashrc` commands will override defaults
 - Add additional files to your dotfiles repo
   - You can add a `bin` folder and add to the path
-  - You can add a `home` folder and have `install.sh` copy to ~
+  - You can add a `home` folder and have `install.sh` copy to $HOME
   - Make sure not to include any `secrets` in your public repo!
     - use [Codespaces Secrets](https://github.com/settings/codespaces) to inject
