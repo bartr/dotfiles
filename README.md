@@ -14,7 +14,9 @@
 ### Usage
 
 - Fork this repo to your public dotfiles repo
-- The dotfiles are cloned to `~/dotfiles` when a `Codespace` is created
+- The dotfiles are cloned to `/workspaces/.codespaces/.persistedshare/dotfiles/` when a `Codespace` is created
+  - Add this command to your install.sh to mount at `~/dotfiles`
+    - `ln -s /workspaces/.codespaces/.persistedshare/dotfiles ~/dotfiles`
   - You can keep the files updated using git pull
   - You can update your `dotfiles` in `Codespace` and git push
   - You can reference the files in other startup scripts like `.bashrc`
@@ -23,8 +25,8 @@
 
 - Edit install.sh to install / customize any apps
   - recommend not including apt upgrade in `install.sh`
-- Edit .patch_bashrc with your preferences
-  - install.sh adds a `source .patch_bashrc` to `~/.bashrc`
+- Edit my_bashrc with your preferences
+  - install.sh adds a `source my_bashrc` to `~/.bashrc`
   - since this is the last line in `.bashrc` commands will override defaults
 - Add additional files to your dotfiles repo
   - You can add a `bin` folder and add to the path
