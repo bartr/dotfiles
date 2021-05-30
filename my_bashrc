@@ -1,4 +1,6 @@
-# my.bashrc patch from dotfiles
+# my_bashrc patch from dotfiles
+# install.sh adds a "source" to $HOME/.bashrc
+# these values will override previously set values
 
 # aliases
 alias ls='ls --color=auto'
@@ -19,6 +21,7 @@ HISTSIZE=1000
 HISTFILESIZE=2000
 shopt -s checkwinsize
 
+# k8s aliases
 alias k='kubectl'
 alias kga='kubectl get all'
 alias kgaa='kubectl get all --all-namespaces'
@@ -28,19 +31,27 @@ alias kl='kubectl logs'
 alias kccc='kubectl config current-context'
 alias kcgc='kubectl config get-contexts'
 
+# quick way to get your IP address(es)
 alias ipconfig='ip -4 a show eth0 | grep inet | sed "s/inet//g" | sed "s/ //g" | cut -d / -f 1'
+export PIP=ipconfig | tail -n 1
 
-# add kubectl completion
+# add kubectl completion for "k"
+# assumes kubectl completion is already setup
 complete -F __start_kubectl k
 
 export GO111MODULE=on
-export PIP=$(ipconfig | tail -n 1)
-export PATH=$PATH:$HOME/.local/bin:/workspaces/.codespaces/.persistedshare/dotfiles/bin
+export PATH=$PATH:$HOME/.local/bin:$HOME/dotfiles/bin
 
 # set GitHub info for codespaces
+# PAT is a GitHub Codespace secret that I set
+# see readme.md for more details
+
+### if you don't set PAT as a secret, this WILL break your ability to git push
 export GITHUB_PAT=$PAT
 export GIT_COMMITTER_NAME=bartr
 export GIT_COMMITTER_EMAIL=bartr@microsoft.com
+
+### ignore the rest as it's n/a for most
 
 # set info for AutoGitOps
 export AGO_PAT=$PAT
