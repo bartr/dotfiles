@@ -17,6 +17,10 @@ git config --global core.whitespace blank-at-eol,blank-at-eof,space-before-tab
 git config --global pull.rebase false
 git config --global init.defaultbranch main
 git config --global core.pager more
+
+# Codespaces sets the env vars for you
+# I override these values in my_bashrc with a "full PAT"
+# GITHUB_PAT only works in the Codespace repo by default
 sudo git config --system credential.helper '!f() { sleep 1; echo "username=${GIT_COMMITTER_NAME}"; echo "password=${GITHUB_PAT}"; }; f'
 
 # this is a cool feature that lets you use "git clone b://dotfiles"
