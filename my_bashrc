@@ -45,11 +45,14 @@ export PATH=$PATH:$HOME/.local/bin:$HOME/dotfiles/bin
 # set GitHub info for codespaces
 # PAT is a GitHub Codespace secret that I set
 # see readme.md for more details
+
+### if you don't set PAT as a secret, this WILL break your ability to git push
 export GITHUB_PAT=$PAT
 export GIT_COMMITTER_NAME=bartr
 export GIT_COMMITTER_EMAIL=bartr@microsoft.com
 
 ### ignore the rest as it's n/a for most
+
 # set info for AutoGitOps
 export AGO_PAT=$PAT
 export AGO_REPO=/cloudatx/gitops
