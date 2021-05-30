@@ -1,6 +1,6 @@
 # Sample dotfiles for GitHub Codespaces
 
-[GitHub Codespaces](https://github.com/features/codespaces) allows you to customize your environment after the base image is created. This repo is an example of common tasks that can be automated.
+[GitHub Codespaces](https://github.com/features/codespaces) allows you to customize your environment after the base image is created. This repo is an example of common tasks that can be automated. [Unofficial guide to dotfiles on GitHub](https://dotfiles.github.io/)
 
 > Your dotfiles repo has to be public
 >
@@ -13,7 +13,7 @@
 
 ### Usage
 
-- Clone (don not fork) this repo to your public dotfiles repo
+- Clone (do not fork) this repo to your public dotfiles repo
 - The dotfiles are cloned to `/workspaces/.codespaces/.persistedshare/dotfiles/` when a `Codespace` is created
   - Add this command to your install.sh to mount at `$HOME/dotfiles`
     - `ln -s /workspaces/.codespaces/.persistedshare/dotfiles $HOME/dotfiles`
