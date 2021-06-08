@@ -59,11 +59,12 @@ export GIT_COMMITTER_EMAIL=bartr@microsoft.com
 # reset to your GitHub Codespaces secret if set
 if [ -n "$PAT" ]
 then
-  export GITHUB_PAT=$PAT
+  export GITHUB_TOKEN=$PAT
 fi
 
 ### ignore the rest as it's n/a for most
 
 # set info for AutoGitOps
-export AGO_PAT=$GITHUB_PAT
+export AGO_PAT=$GITHUB_TOKEN
 export AGO_REPO=/cloudatx/gitops
+export ASB_CLUSTER_ADMIN_GROUP=4-co
