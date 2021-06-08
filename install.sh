@@ -25,7 +25,7 @@ git config --global alias.gone "! git checkout main && git fetch -pa && git pull
 # Codespaces sets the env vars for you
 # I override these values in my_bashrc with a "full PAT"
 # GITHUB_PAT only works in the Codespace repo by default
-sudo git config --system credential.helper '!f() { sleep 1; echo "username=${GIT_COMMITTER_NAME}"; echo "password=${GITHUB_PAT}"; }; f'
+sudo git config --system credential.helper '!f() { sleep 1; echo "username=${GIT_COMMITTER_NAME}"; echo "password=${GITHUB_TOKEN}"; }; f'
 
 # this is a cool feature that lets you use "git clone b://dotfiles"
 # instead of "git clone https://github.com/bartr/dotfiles"
