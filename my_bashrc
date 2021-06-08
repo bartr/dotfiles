@@ -61,6 +61,7 @@ if [ -n "$PAT" ]
 then
   export GITHUB_TOKEN=$PAT
 fi
+export GITHUB_PAT=$GITHUB_TOKEN
 
 ### ignore the rest as it's n/a for most
 
