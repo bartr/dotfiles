@@ -1,0 +1,25 @@
+{
+	"name": "dot-files",
+	"build": { "dockerfile": "Dockerfile" },
+
+	// Set container specific settings
+	"settings": {
+		"terminal.integrated.defaultProfile.linux": "zsh"
+	},
+
+	"extensions": [
+		"ms-azuretools.vscode-docker",
+		"davidanson.vscode-markdownlint",
+		"gruntfuggly.todo-tree",
+		"humao.rest-client"
+	],
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "uname -a",
+
+	// Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+	"remoteUser": "vscode"
+}
