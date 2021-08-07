@@ -5,7 +5,11 @@ ln -s /workspaces/.codespaces/.persistedshare/dotfiles $HOME/dotfiles
 
 # source the bashrc_patch from dotfiles
 echo "" >> ~/.bashrc
-echo "source ~/dotfiles/my_bashrc" >> ~/.bashrc
+echo "source ~/dotfiles/my_rc" >> ~/.bashrc
+
+# source the bashrc_patch from dotfiles
+echo "" >> ~/.zshrc
+echo "source ~/dotfiles/my_rc" >> ~/.zshrc
 
 # make the dir if it doesn't exist
 mkdir -p ~/.local/bin
@@ -34,9 +38,3 @@ git config --global url.https://github.com/cloudatx/.insteadOf c://
 git config --global url.https://github.com/.insteadOf g://
 git config --global url.https://github.com/lnkdus/.insteadOf l://
 git config --global url.https://github.com/retaildevcrews/.insteadOf r://
-
-# install / update key utils
-DEBIAN_FRONTEND=noninteractive
-sudo apt-get update
-sudo apt-get install -y --no-install-recommends apt-utils dialog curl git nano jq httpie bash-completion
-DEBIAN_FRONTEND=dialog
