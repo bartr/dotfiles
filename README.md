@@ -15,13 +15,15 @@
 
 ### Usage
 
-- Clone (do not fork) this repo to your public dotfiles repo
+- Click `User this template`
+  - Create a repo at yourName/dotfiles
+  - Make sure the repo is public
 - The dotfiles are cloned to `/workspaces/.codespaces/.persistedshare/dotfiles/` when a `Codespace` is created
-  - Add this command to your install.sh to mount at `$HOME/dotfiles`
+  - This command in install.sh to mounts at `$HOME/dotfiles`
     - `ln -s /workspaces/.codespaces/.persistedshare/dotfiles $HOME/dotfiles`
   - You can keep the files updated using git pull
-  - You can update your `dotfiles` in `Codespace` and git push
-  - You can reference the files in other startup scripts like `.bashrc`
+  - You can update your `dotfiles` in any `Codespace` and git push
+  - You can reference the files in other startup scripts like `.zshrc`
 - `install.sh` adds `$HOME/dotfiles/bin` to the path
   - a great place to keep scripts / utils that you use all the time
 
@@ -29,9 +31,9 @@
 
 - Edit install.sh to install / customize any apps
   - recommend not including `apt upgrade` in `install.sh`
-- Edit my_rc with your preferences
-  - install.sh adds a `source my_rc` to `$HOME/.bashrc` and `$HOME/.zshrc`
-  - since this is the last line in `.bashrc` commands will override previous values
+- Edit my_zshrc with your preferences
+  - install.sh adds a `source my_zshrc` to `$HOME/.zshrc`
+  - since this is the last line in `.zshrc` commands will override previous values
 - Add additional files to your dotfiles repo
   - You can add a `bin` folder and add to the path
   - You can add a `home` folder and have `install.sh` copy to $HOME
