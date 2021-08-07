@@ -8,7 +8,7 @@
 >
 > Do not store keys or secrets in a public repo!
 
-### Injecting Secrets
+## Injecting Secrets
 
 - Codespaces will inject secrets into `env vars` for you automatically
 - Add your secrets [here](https://github.com/settings/codespaces)
@@ -29,8 +29,8 @@
 
 - Edit install.sh to install / customize any apps
   - recommend not including `apt upgrade` in `install.sh`
-- Edit my_bashrc with your preferences
-  - install.sh adds a `source my_bashrc` to `$HOME/.bashrc`
+- Edit my_rc with your preferences
+  - install.sh adds a `source my_rc` to `$HOME/.bashrc` and `$HOME/.zshrc`
   - since this is the last line in `.bashrc` commands will override previous values
 - Add additional files to your dotfiles repo
   - You can add a `bin` folder and add to the path
