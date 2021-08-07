@@ -18,6 +18,7 @@
 - Click `User this template`
   - Create a repo at yourName/dotfiles
   - Make sure the repo is public
+  - Update `user.name` and `user.email` in `install.sh`
 - The dotfiles are cloned to `/workspaces/.codespaces/.persistedshare/dotfiles/` when a `Codespace` is created
   - This command in install.sh to mounts at `$HOME/dotfiles`
     - `ln -s /workspaces/.codespaces/.persistedshare/dotfiles $HOME/dotfiles`
