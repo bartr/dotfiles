@@ -5,11 +5,11 @@ ln -s /workspaces/.codespaces/.persistedshare/dotfiles $HOME/dotfiles
 
 # source the bashrc_patch from dotfiles
 echo "" >> ~/.bashrc
-echo "source ~/dotfiles/my_rc" >> ~/.bashrc
+echo "source ~/dotfiles/my_bashrc" >> ~/.bashrc
 
 # source the bashrc_patch from dotfiles
 echo "" >> ~/.zshrc
-echo "source ~/dotfiles/my_rc" >> ~/.zshrc
+echo "source ~/dotfiles/my_zshrc" >> ~/.zshrc
 
 # make the dir if it doesn't exist
 mkdir -p ~/.local/bin
