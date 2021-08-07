@@ -1,0 +1,71 @@
+# my_bashrc patch from dotfiles
+# install.sh adds a "source" to $HOME/.bashrc
+# these values will override previously set values
+
+# aliases
+alias ls='ls --color=auto'
+alias ll='ls -lF'
+alias la='ls -alF'
+alias l='ls -CF'
+alias dir='dir --color=auto'
+alias vdir='vdir --color=auto'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+alias path='echo $PATH | sed "s/::/:/g" | sed "s/:/\n/g"'
+
+# bash history
+HISTCONTROL=ignoreboth
+shopt -s histappend
+HISTSIZE=1000
+HISTFILESIZE=2000
+shopt -s checkwinsize
+
+# add bash completion
+if [ -f /etc/bash_completion ] && ! shopt -oq posix
+then
+    . /etc/bash_completion
+fi
+
+# k8s aliases
+alias k='kubectl'
+alias kga='kubectl get all'
+alias kgaa='kubectl get all --all-namespaces'
+alias kaf='kubectl apply -f'
+alias kdelf='kubectl delete -f'
+alias kl='kubectl logs'
+alias kccc='kubectl config current-context'
+alias kcgc='kubectl config get-contexts'
+
+# quick way to get your IP address(es)
+alias ipconfig='ip -4 a show eth0 | grep inet | sed "s/inet//g" | sed "s/ //g" | cut -d / -f 1'
+export PIP=ipconfig | tail -n 1
+
+# add kubectl completion for "k"
+# assumes kubectl completion is already setup
+complete -F __start_kubectl k
+
+export GO111MODULE=on
+export PATH=$PATH:$HOME/.local/bin:$HOME/dotfiles/bin
+
+# set GitHub info for codespaces
+
+# change this to your name / email
+export GIT_COMMITTER_NAME=bartr
+export GIT_COMMITTER_EMAIL=bartr@microsoft.com
+
+# PAT is a GitHub Codespace secret that I set
+# see readme.md for more details
+# reset to your GitHub Codespaces secret if set
+if [ -n "$PAT" ]
+then
+  export GITHUB_TOKEN=$PAT
+fi
+export GITHUB_PAT=$GITHUB_TOKEN
+
+### ignore the rest as it's n/a for most
+
+# set info for AutoGitOps
+export AGO_PAT=$GITHUB_TOKEN
+export AGO_REPO=/cloudatx/gitops
+export ASB_CLUSTER_ADMIN_GROUP=4-co
