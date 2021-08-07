@@ -16,16 +16,8 @@ alias path='echo $PATH | sed "s/::/:/g" | sed "s/:/\n/g"'
 
 # bash history
 HISTCONTROL=ignoreboth
-shopt -s histappend
 HISTSIZE=1000
 HISTFILESIZE=2000
-shopt -s checkwinsize
-
-# add bash completion
-if [ -f /etc/bash_completion ] && ! shopt -oq posix
-then
-    . /etc/bash_completion
-fi
 
 # k8s aliases
 alias k='kubectl'
@@ -40,10 +32,6 @@ alias kcgc='kubectl config get-contexts'
 # quick way to get your IP address(es)
 alias ipconfig='ip -4 a show eth0 | grep inet | sed "s/inet//g" | sed "s/ //g" | cut -d / -f 1'
 export PIP=ipconfig | tail -n 1
-
-# add kubectl completion for "k"
-# assumes kubectl completion is already setup
-complete -F __start_kubectl k
 
 export GO111MODULE=on
 export PATH=$PATH:$HOME/.local/bin:$HOME/dotfiles/bin
@@ -61,11 +49,3 @@ if [ -n "$PAT" ]
 then
   export GITHUB_TOKEN=$PAT
 fi
-export GITHUB_PAT=$GITHUB_TOKEN
-
-### ignore the rest as it's n/a for most
-
-# set info for AutoGitOps
-export AGO_PAT=$GITHUB_TOKEN
-export AGO_REPO=/cloudatx/gitops
-export ASB_CLUSTER_ADMIN_GROUP=4-co
