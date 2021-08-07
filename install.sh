@@ -17,8 +17,6 @@ mkdir -p ~/.local/bin
 # configure git (change user.*)
 sudo git config --system user.name bartr
 sudo git config --system user.email bartr@microsoft.com
-#git config --global user.name bartr
-#git config --global user.email bartr@microsoft.com
 git config --global core.whitespace blank-at-eol,blank-at-eof,space-before-tab
 git config --global pull.rebase false
 git config --global init.defaultbranch main
