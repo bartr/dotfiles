@@ -40,3 +40,8 @@ git config --global url.https://github.com/cloudatx/.insteadOf c://
 git config --global url.https://github.com/.insteadOf g://
 git config --global url.https://github.com/lnkdus/.insteadOf l://
 git config --global url.https://github.com/retaildevcrews/.insteadOf r://
+
+# login to GitHub container registry if $PAT set
+if [ -n "$PAT"]; then
+  docker login ghcr.io -u bartr -p $PAT
+fi
