@@ -1,5 +1,5 @@
-# my_bashrc patch from dotfiles
-# install.sh adds a "source" to $HOME/.bashrc
+# my_zshrc patch from dotfiles
+# install.sh adds a "source" to $HOME/.zshrc
 # these values will override previously set values
 
 # aliases
@@ -13,11 +13,6 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias path='echo $PATH | sed "s/::/:/g" | sed "s/:/\n/g"'
-
-# bash history
-HISTCONTROL=ignoreboth
-HISTSIZE=1000
-HISTFILESIZE=2000
 
 # k8s aliases
 alias k='kubectl'
@@ -34,7 +29,7 @@ alias ipconfig='ip -4 a show eth0 | grep inet | sed "s/inet//g" | sed "s/ //g" |
 export PIP=ipconfig | tail -n 1
 
 export GO111MODULE=on
-export PATH=$PATH:$HOME/.local/bin:$HOME/dotfiles/bin
+export PATH=$PATH:$HOME/dotfiles/bin
 
 # set GitHub info for codespaces
 
