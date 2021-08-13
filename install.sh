@@ -36,6 +36,6 @@ git config --global url.https://github.com/lnkdus/.insteadOf l://
 git config --global url.https://github.com/retaildevcrews/.insteadOf r://
 
 # login to GitHub container registry if $PAT set
-if [ -n "$PAT"]; then
+if [[ -n $PAT ]]; then
   docker login ghcr.io -u bartr -p $PAT
 fi
