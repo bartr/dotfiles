@@ -1,5 +1,7 @@
-# See here for image contents: https://github.com/microsoft/vscode-dev-containers/tree/v0.187.0/containers/ubuntu/.devcontainer/base.Dockerfile
+# this image is built and updated weekly
+# https://github.com/cse-labs/codespaces-images
 
-FROM mcr.microsoft.com/vscode/devcontainers/base:focal
+FROM ghcr.io/cse-labs/k3d:latest
 
- RUN apt-get update
+# some images require specific values
+ARG USERNAME=vscode
