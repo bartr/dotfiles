@@ -10,33 +10,28 @@ assignees: ''
 
 ## Description
 
-What: 
- - 
- 
-Why:
-- 
+- Who
 
-When:
-- 
+- What
 
-Where:
- - 
+- Why
+
+- When
+
+- Where
 
 ## Acceptance Criteria
 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
 - [ ] Resolve linter errors
 - [ ] Remove to-do, dead code, & unnecessary comments
 - [ ] Existing documentation is updated (readme, .md's)
 - [ ] New documentation needed to support the change is created
 - [ ] Validation test run if applicable
+- [ ]
+- [ ]
 
 ## Tasks
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
+
+- [ ]
+- [ ]
+- [ ]
