@@ -4,7 +4,7 @@
 
 # aliases
 alias ls='ls --color=auto'
-alias ll='ls -lF'
+alias ll='ls -alF'
 alias la='ls -alF'
 alias l='ls -CF'
 alias dir='dir --color=auto'
