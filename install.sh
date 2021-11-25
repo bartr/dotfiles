@@ -30,9 +30,8 @@ git config --global alias.gone "! git checkout main && git fetch -pa && git pull
 # this is a cool feature that lets you use "git clone b://dotfiles"
 # instead of "git clone https://github.com/bartr/dotfiles"
 git config --global url.https://github.com/bartr/.insteadOf b://
-git config --global url.https://github.com/cloudatx/.insteadOf c://
+git config --global url.https://github.com/cnp-labs/.insteadOf c://
 git config --global url.https://github.com/.insteadOf g://
-git config --global url.https://github.com/lnkdus/.insteadOf l://
 git config --global url.https://github.com/retaildevcrews/.insteadOf r://
 
 # login to GitHub container registry if $PAT set
