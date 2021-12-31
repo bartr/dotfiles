@@ -4,11 +4,11 @@
 ln -s /workspaces/.codespaces/.persistedshare/dotfiles $HOME/dotfiles
 
 # source the my_zshrc from dotfiles
-echo "" >> ~/.zshrc
-echo "source ~/dotfiles/my_zshrc" >> ~/.zshrc
+echo "" >> $HOME/.zshrc
+echo "source $HOME/dotfiles/my_zshrc" >> $HOME/.zshrc
 
 # make the dir if it doesn't exist
-mkdir -p ~/.local/bin
+mkdir -p $HOME/.local/bin
 
 # configure git (change user.*)
 sudo git config --system user.name bartr
