@@ -30,7 +30,7 @@
 
 ### Customizing your dotfiles
 
-- Edit install.sh to install / customize any apps
+- Edit install.sh to install / customize any scripts / utilities
   - recommend not including `apt upgrade` in `install.sh`
 - Edit my_zshrc with your preferences
   - install.sh adds a `source my_zshrc` to `$HOME/.zshrc`
