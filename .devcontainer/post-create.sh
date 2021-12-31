@@ -1,8 +1,6 @@
 #!/bin/bash
 
-echo "post-create start" >> ~/status
-
-# this runs in background after UI is available
+echo "post-create start" >> $HOME/status
 
 # (optional) upgrade packages
 #sudo apt-get update
@@ -12,4 +10,4 @@ echo "post-create start" >> ~/status
 
 # add your commands here
 
-echo "post-create complete" >> ~/status
+echo "post-create complete" >> $HOME/status
